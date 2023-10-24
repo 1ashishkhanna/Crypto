@@ -162,10 +162,10 @@ const First = () => {
                 </Text>
               </TouchableOpacity>
             </View>
-            <View>
+            <View className=' flex-row justify-center'>
               <Progress.Bar
                 progress={0.8}
-                width={350}
+                width={300}
                 height={8}
                 color="#FE4190"
                 className="bg-[#2DABAD] "
