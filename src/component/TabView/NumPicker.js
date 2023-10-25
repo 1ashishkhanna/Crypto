@@ -17,20 +17,28 @@ function NumPicker({}) {
         onValueChange={(itemValue, itemIndex) => setSelectedNumber(itemValue)}>
         {numberItems}
       </Picker>
-    
+
       <View className="flex-row items-center justify-between">
-        <View>
-          <Text className="text-base text-[#B5C0C8]">You can win</Text>
-          <Text className="text-base font-bold text-[#03A67F]"> $2000</Text>
+        <View className='flex-col space-y-2'>
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontSize: 12}}
+            className=" text-[#B5C0C8]">
+            You can win
+          </Text>
+          <Text className="t font-bold text-[#03A67F]"> $2000</Text>
         </View>
 
         <View className="flex-row items-center space-x-3">
-          <Text className="text-base text-[#B5C0C8]">Total</Text>
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontSize: 12}}
+            className="t text-[#B5C0C8]">
+            Total
+          </Text>
           <Image
             className=" w-5 h-5"
             source={require('../../assets/25498.png')}
           />
-          <Text className=' font-bold text-base'>{selectedNumber}</Text>
+          <Text className=" font-bold text-base">{selectedNumber}</Text>
         </View>
       </View>
     </View>

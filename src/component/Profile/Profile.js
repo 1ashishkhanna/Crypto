@@ -23,84 +23,125 @@ const Profile = () => {
     <View className=" mx-5 mt-5 ">
       <View className="flex-row items-center justify-between">
         <Image
-          className=" w-10 h-10"
+          className=" w-8 h-8"
           source={require('../../assets/Group12465.png')}
         />
 
-        <Text className="text-xl text-gray-600">Profile</Text>
+        <Text
+          style={{fontFamily: 'Montserrat-Regular', fontSize: 16}}
+          className=" text-gray-600 font-semibold">
+          Profile
+        </Text>
         <TouchableOpacity className="relative">
           <View
-            className="bg-[#6231AD] absolute right-0 z-10 py-1  px-2 -top-2 "
-            style={styles.messageCount}>
-            <Text className="text-center text-white">1</Text>
+            style={{width: 16, height: 16}}
+            className="bg-[#6231AD] absolute   rounded-full -right-1 z-10  -top-1 ">
+            <Text
+              style={{fontFamily: 'Montserrat-Regular', fontSize: 11}}
+              className="text-center    text-white">
+              1
+            </Text>
           </View>
 
-          <ChatBubbleLeftIcon color="#727682" size={40} />
+          <ChatBubbleLeftIcon color="#727682" size={30} />
         </TouchableOpacity>
       </View>
       <View className="  flex-col justify-center items-center mt-10 space-y-4">
         <View className="relative">
           <TouchableOpacity
             className="border p-1  rounded-full
-       absolute z-10  right-0 bottom-0 bg-white">
-            <PencilSquareIcon size={20} color={'#727682'} className="" />
+       absolute z-10  right-0 bottom-0 bg-white border-[#727682]">
+            <PencilSquareIcon size={15} color={'#727682'} className="" />
           </TouchableOpacity>
           <Image
-            className="  z-0 w-24 h-24"
+            style={{width: 75, height: 75}}
+            className="  z-0 "
             source={require('../../assets/Ellipse1.png')}
           />
         </View>
-        <View className=" flex-col space-y-3">
-          <Text className="text-lg text-black text-center ">Jina Simons</Text>
-          <Text className=" text-center text-[#727682] text-base ">
+        <View className=" flex-col space-y-1">
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontSize: 14}}
+            className=" text-black text-center ">
+            Jina Simons
+          </Text>
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontSize: 12}}
+            className=" text-center text-[#727682]  ">
             6000 Pts
           </Text>
 
-          <Text className="text-[#727682]  text-lg  font-semibold">
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontSize: 14}}
+            className="text-[#727682]  font-semibold   ">
             I’m a software developer that has been in the crypto space since
             2012. And I’ve seen it grow and falter over a period of time. Really
             happy to be here!
           </Text>
         </View>
         <TouchableOpacity className="flex-row items-center space-x-2 ">
-          <ArrowRightOnRectangleIcon color={'#727682'} size={30} />
+          <ArrowRightOnRectangleIcon color={'#727682'} size={25} />
 
-          <Text className="text-[#727682]  text-xl  ">Logout</Text>
+          <Text
+            style={{fontFamily: 'Montserrat-Regular', fontWeight: 500, fontSize:14}}
+            className="text-[#727682]   ">
+            Logout
+          </Text>
         </TouchableOpacity>
       </View>
-      <View className=" mt-10">
-        <View className='flex-row justify-center z-10 top-5'>
+      <View className=" mt-3">
+        <View className="flex-row justify-center z-10 top-4">
           <Image
-            className=" w-9 h-10 "
+            style={{width: 26.867, height: 31}}
             source={require('../../assets/Group11345.png')}
           />
         </View>
 
         <View className=" border px-4 py-6 flex-row  justify-between   border-[#EEEAF3]  rounded">
           <View className="flex-col space-y-2">
-            <Text className="text-base text-[#727682] font-semibold">
+            <Text
+              style={{fontFamily: 'Montserrat-Regular', fontSize: 14}}
+              className="text-base text-[#727682] font-bold">
               Under or Over
             </Text>
             <View className="flex-row items-center  space-x-2">
               <Image
-                className=" w-10 h-10"
+                style={{width: 32, height: 32}}
                 source={require('../../assets/Group12234.png')}
               />
 
-              <Text className=" text-3xl font-bold">81%</Text>
+              <Text
+                style={{
+                  fontFamily: 'Montserrat-Regular',
+                  fontWeight: 800,
+                  fontSize: 24,
+                }}
+                className="  font-bold">
+                81%
+              </Text>
             </View>
           </View>
           <View className="flex-col space-y-2">
-            <Text className="text-base text-[#727682] font-semibold">
+            <Text
+              style={{fontFamily: 'Montserrat-Regular', fontSize: 14}}
+              className="text-base text-[#727682] font-bold">
               Top 5
             </Text>
             <View className="flex-row items-center  space-x-2">
               <Image
-                className=" w-10 h-10"
+                style={{width: 32, height: 32}}
                 source={require('../../assets/Group12233.png')}
               />
 
-              <Text className=" text-3xl font-bold">-51%</Text>
+              <Text
+                style={{
+                  fontFamily: 'Montserrat-Regular',
+                  fontWeight: 800,
+                  fontSize: 24,
+                }}
+                className="">
+                -51%
+              </Text>
             </View>
           </View>
         </View>
@@ -110,7 +151,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-const styles = StyleSheet.create({
-  messageCount: {borderRadius: 50},
-});

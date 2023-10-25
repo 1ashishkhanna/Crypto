@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeIcon, UserIcon } from 'react-native-heroicons/solid';
+import { ChartBarIcon, HomeIcon, MagnifyingGlassIcon, TrophyIcon, UserIcon } from 'react-native-heroicons/solid';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/Home/HomeScreen';
 import ProfileScreen from './screens/Profile/ProfileScreen';
@@ -22,6 +22,9 @@ function TabNavigator() {
           } else if (route.name === 'Profile') {
             iconName = 'Profile';
           }
+          else if (route.name === 'Leagues') {
+            iconName = 'Leagues';
+          }
           return <TabBarIcon name={iconName} color={color} size={size} />;
         },
       })}
@@ -37,8 +40,38 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Leagues"
         component={ProfileScreen}
+        options={{
+          tabBarLabel: 'Leagues',
+          tabBarIcon: ({ color, size }) => (
+            <TrophyIcon name="Leagues" color={color} size={size} />
+          ),
+        }}
+      />
+        <Tab.Screen
+        name="Search"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color, size }) => (
+            <MagnifyingGlassIcon name="Search" color={color} size={size} />
+          ),
+        }}
+      />
+           <Tab.Screen
+        name="Leaderboard"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: 'Leaderboard',
+          tabBarIcon: ({ color, size }) => (
+            <ChartBarIcon name="Leaderboard" color={color} size={size} />
+          ),
+        }}
+      />
+         <Tab.Screen
+        name="Profile"
+        component={HomeScreen}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
